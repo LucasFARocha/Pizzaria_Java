@@ -15,6 +15,7 @@ public class Pedido {
     }
 
     public void setNumPedido(int numPedido) {
+
         this.numPedido = numPedido;
     }
 
