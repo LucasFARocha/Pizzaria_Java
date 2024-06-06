@@ -3,8 +3,8 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 
 public class Pizzaria {
-    // Declarando fora do main, e usando static, para ser acessível por outras
-    // funções
+    // Declarando fora do main, e usando static, para 
+    // ser acessível por outras funções
     static ListaEncadeada listaPedidos = new ListaEncadeada();
     static Fila filaPreparo = new Fila(3);
     static Pilha pilhaEntrega = new Pilha(3);

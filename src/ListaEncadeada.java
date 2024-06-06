@@ -1,11 +1,11 @@
 import javax.swing.JOptionPane;
 
-import java.awt.Dimension;
+// import java.awt.Dimension;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTextArea;
+// import javax.swing.JFrame;
+// import javax.swing.JPanel;
+// import javax.swing.JScrollPane;
+// import javax.swing.JTextArea;
 
 public class ListaEncadeada {
     IntNoSimples primeiro, ultimo;
@@ -142,61 +142,61 @@ public class ListaEncadeada {
         }
     }
 
-    public void exibirListas() {
-        JPanel panel = new JPanel();
-        panel.setLayout(null);
+    // public void exibirListas() {
+    //     JPanel panel = new JPanel();
+    //     panel.setLayout(null);
 
-        JScrollPane scrollPane = new JScrollPane(panel);
-        scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
-        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
-        scrollPane.setBounds(0, 0, 400, 500);
+    //     JScrollPane scrollPane = new JScrollPane(panel);
+    //     scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+    //     scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+    //     scrollPane.setBounds(0, 0, 400, 500);
 
-        JFrame frame = new JFrame();
-        frame.setSize(400, 500);
-        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        frame.add(scrollPane);
-        frame.setVisible(true);
+    //     JFrame frame = new JFrame();
+    //     frame.setSize(400, 500);
+    //     frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+    //     frame.add(scrollPane);
+    //     frame.setVisible(true);
 
-        IntNoSimples temp_no = primeiro;
-        int posicao = 0;
+    //     IntNoSimples temp_no = primeiro;
+    //     int posicao = 0;
 
-        int height = 0;
+    //     int height = 0;
 
-        while (temp_no != null) {
-            String pizzas = "";
-            int qntPizzas = temp_no.valor.getTamanhosPizzas().length;
+    //     while (temp_no != null) {
+    //         String pizzas = "";
+    //         int qntPizzas = temp_no.valor.getTamanhosPizzas().length;
 
-            for (int j = 0; j < temp_no.valor.getTamanhosPizzas().length; j++) {
-                pizzas += "\n\nTamanho da " + (j + 1) + "ª pizza: " +
-                        temp_no.valor.getTamanhoPizza(j) +
-                        "\nSabor da " + (j + 1) + "ª pizza: " + temp_no.valor.getSaborPizza(j);
-            }
+    //         for (int j = 0; j < temp_no.valor.getTamanhosPizzas().length; j++) {
+    //             pizzas += "\n\nTamanho da " + (j + 1) + "ª pizza: " +
+    //                     temp_no.valor.getTamanhoPizza(j) +
+    //                     "\nSabor da " + (j + 1) + "ª pizza: " + temp_no.valor.getSaborPizza(j);
+    //         }
 
-            String infoText = "Número do pedido: " + temp_no.valor.getNumPedido() +
-                    "\nEndereço: " + temp_no.valor.getEndereco() +
-                    "\nDistância: " + temp_no.valor.getDistancia() + "km" + pizzas;
+    //         String infoText = "Número do pedido: " + temp_no.valor.getNumPedido() +
+    //                 "\nEndereço: " + temp_no.valor.getEndereco() +
+    //                 "\nDistância: " + temp_no.valor.getDistancia() + "km" + pizzas;
 
-            JTextArea informacoes = new JTextArea(infoText);
-            informacoes.setBounds(50, height, 300, 100 + (30 * qntPizzas));
-            informacoes.setLineWrap(true);
-            informacoes.setWrapStyleWord(true);
-            informacoes.setEditable(false);
+    //         JTextArea informacoes = new JTextArea(infoText);
+    //         informacoes.setBounds(50, height, 300, 100 + (30 * qntPizzas));
+    //         informacoes.setLineWrap(true);
+    //         informacoes.setWrapStyleWord(true);
+    //         informacoes.setEditable(false);
 
-            panel.add(informacoes);
+    //         panel.add(informacoes);
 
-            System.out.println("LISTA: " +
-                    temp_no.valor.getNumPedido() +
-                    " - Endereço: " + temp_no.valor.getEndereco() +
-                    " - Distância: " + temp_no.valor.getDistancia() +
-                    " | posição: " + posicao);
+    //         System.out.println("LISTA: " +
+    //                 temp_no.valor.getNumPedido() +
+    //                 " - Endereço: " + temp_no.valor.getEndereco() +
+    //                 " - Distância: " + temp_no.valor.getDistancia() +
+    //                 " | posição: " + posicao);
 
-            pizzas = "";
-            temp_no = temp_no.prox;
-            posicao++;
-            height += 120 + (20 * qntPizzas);
-        }
+    //         pizzas = "";
+    //         temp_no = temp_no.prox;
+    //         posicao++;
+    //         height += 120 + (20 * qntPizzas);
+    //     }
 
-        panel.setPreferredSize(new Dimension(400, 500));
-        panel.revalidate();
-    }
+    //     panel.setPreferredSize(new Dimension(400, 500));
+    //     panel.revalidate();
+    // }
 }
