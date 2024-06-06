@@ -46,8 +46,7 @@ public class Pedido {
         this.tamanhoPizza[index] = tamanhoPizza;
     }
 
-    public void setTamanhosPizzas(String[] tamanhosPizzas)
-    {
+    public void setTamanhosPizzas(String[] tamanhosPizzas) {
         this.tamanhoPizza = tamanhosPizzas;
     }
 
@@ -63,8 +62,7 @@ public class Pedido {
         this.saborPizza[indice] = saborPizza;
     }
 
-    public void setSaboresPizzas(String[] saboresPizzas)
-    {
+    public void setSaboresPizzas(String[] saboresPizzas) {
         this.saborPizza = saboresPizzas;
     }
 }

@@ -74,7 +74,7 @@ public class Pizzaria {
             controlador.geraRelatorio();
         });
 
-        // Botão de inclui pedidos para entrega
+        // Botão de entregar pedidos
         JButton entregaPedido = new JButton("Entregar pedidos da mochila");
         entregaPedido.setBounds((width - 210) / 2, 220, 200, 20);
         // Adiciona uma ação ao botão
