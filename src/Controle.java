@@ -10,6 +10,7 @@ public class Controle {
     // Variáveis para controlar as funções
     static int qtdPedidos = 0;
     static int qtdPedidosPreparo = 0;
+    static int qtdPedidosNaCozinha = 0;
     static IntNoSimples pedidosEmEntrega[] = new IntNoSimples[3];
     static int qtdEntregas = 0;
 
@@ -40,10 +41,10 @@ public class Controle {
                 pedido.setEndereco(JOptionPane.showInputDialog("Informe o endereço de entrega"));
                 pedido.setDistancia(Float.parseFloat(JOptionPane.showInputDialog(
                         "Informe a distância até o local (em KM)")));
-
+                        
                 // Importante aumentar o valor ANTES de estabelecer o número do pedido
                 qtdPedidos++;
-
+                
                 // Estabelecendo o número do pedido como o número da quantidade de pedidos
                 // feitos, ou seja, o primeiro pedido terá número 1, o segundo número 2, e
                 // assim por diante
@@ -118,7 +119,7 @@ public class Controle {
 
     // PREPARA PEDIDO
     public void preparaPedido() {
-        if ((historicoPedidos.ContarNos() - qtdPedidosPreparo) >= 3) {
+        if ((historicoPedidos.ContarNos() - qtdPedidosNaCozinha) >= 3) {
             // Caso existam 3 ou mais pedidos que ainda não foram para a cozinha
 
             // Loop garantindo que apenas 3 deles vão para a cozinha
@@ -129,7 +130,7 @@ public class Controle {
                 // *Lembrando que a variável não teve seu valor aumentado ainda, portanto
                 // corresponde
                 // ao índice certo da lista de pedidos
-                IntNoSimples temp_pedido = historicoPedidos.buscaIndice(qtdPedidosPreparo);
+                IntNoSimples temp_pedido = historicoPedidos.buscaIndice(qtdPedidosNaCozinha);
 
                 filaPreparo.enfileirar(temp_pedido);
 
@@ -137,6 +138,7 @@ public class Controle {
                         "Pedido número " + temp_pedido.valor.getNumPedido() + " enviado para a cozinha");
 
                 qtdPedidosPreparo++;
+                qtdPedidosNaCozinha++;
             }
         } else if (filaPreparo.cheia()) {
             // Caso a fila da cozinha esteja cheia
@@ -247,6 +249,8 @@ public class Controle {
 
                 // Reiniciando a contagem
                 qtdEntregas = 0;
+
+                qtdPedidosNaCozinha -= 6;
             }
 
             // Loop para apagar os valores do vetor

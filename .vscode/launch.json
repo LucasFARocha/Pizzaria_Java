@@ -9,6 +9,13 @@
             "name": "Pizzaria",
             "request": "launch",
             "mainClass": "Pizzaria",
+            "projectName": "Pizzaria_Java_64288388"
+        },
+        {
+            "type": "java",
+            "name": "Pizzaria",
+            "request": "launch",
+            "mainClass": "Pizzaria",
             "projectName": "Pizzaria_d9cc4266"
         },
         {
